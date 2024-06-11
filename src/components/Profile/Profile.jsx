@@ -3,8 +3,14 @@ import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 
 const Card = styled.div`
-  width: 20%;
-  max-width: 200px;
+  width: 25%;
+  max-width: 300px;
+  cursor: pointer;
+  color: gray;
+
+  &:hover {
+    color: white;
+  }
 `;
 
 const Avatar = styled.img`
@@ -13,7 +19,6 @@ const Avatar = styled.img`
 `;
 
 const Name = styled.h2`
-  color: gray;
   text-align: center;
 `;
 
