@@ -5,7 +5,7 @@ import styled from "styled-components";
 import Profile from "./Profile";
 
 const ProfilesContainer = styled.div`
-  display: flex;
+  display: inline-flex;
   gap: 2rem;
   justify-content: center;
 `;

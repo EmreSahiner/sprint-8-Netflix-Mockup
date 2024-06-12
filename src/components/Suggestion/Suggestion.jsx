@@ -6,7 +6,6 @@ import axios from "axios";
 
 const Card = styled.div`
   padding: 1rem;
-  width: 100vw;
 `;
 
 const Title = styled.h2`
