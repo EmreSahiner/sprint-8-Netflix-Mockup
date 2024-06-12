@@ -180,8 +180,11 @@ export default function Login() {
           type="email"
           placeholder="Email adresinizi giriniz"
           value={formData.email}
+          data-cy="input-email"
         />
-        {errors.email && <ErrorMessage>{errorMessages.email}</ErrorMessage>}
+        {errors.email && (
+          <ErrorMessage data-cy="errors">{errorMessages.email}</ErrorMessage>
+        )}
       </Row>
       <Row>
         <Label htmlFor="password">Password:</Label>
@@ -192,9 +195,10 @@ export default function Login() {
           type="password"
           placeholder="Şifrenizi giriniz"
           value={formData.password}
+          data-cy="input-password"
         />
         {errors.password && (
-          <ErrorMessage>{errorMessages.password}</ErrorMessage>
+          <ErrorMessage data-cy="errors">{errorMessages.password}</ErrorMessage>
         )}
       </Row>
       <Row>
@@ -205,12 +209,17 @@ export default function Login() {
           type="checkbox"
           className="inline-input"
           checked={formData.terms}
+          data-cy="input-terms"
         />
         <Label htmlFor="terms">Anlaşma şartlarını kabul ediyorum.</Label>
-        {errors.terms && <ErrorMessage>{errorMessages.terms}</ErrorMessage>}
+        {errors.terms && (
+          <ErrorMessage data-cy="errors">{errorMessages.terms}</ErrorMessage>
+        )}
       </Row>
       <Row>
-        <Button>Login</Button>
+        <Button disabled={!isValid} data-cy="submit-login-form">
+          Login
+        </Button>
       </Row>
     </Form>
   );
