@@ -16,7 +16,7 @@ export default function Home(props) {
 
   return (
     <>
-      <Hero />
+      <Hero activeProfile={activeProfile} />
       {suggestions.map((suggestion, index) => {
         return <Suggestion key={index} suggestion={suggestion} />;
       })}

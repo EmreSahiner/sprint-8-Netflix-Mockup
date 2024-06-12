@@ -2,6 +2,7 @@ import styled from "styled-components";
 import video from "../../assets/movies/queen_of_tears.mp4";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleInfo, faPlay } from "@fortawesome/free-solid-svg-icons";
+import Header from "../Header/Header";
 
 const Player = styled.video`
   position: absolute;
@@ -72,6 +73,7 @@ const DarkArea = styled.div`
 export default function Hero() {
   return (
     <PromotedVideoSection>
+      <Header />
       <Player autoPlay loop muted>
         <source src={video} type="video/mp4" />
         Your browser does not support HTML5 video.
