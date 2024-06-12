@@ -37,7 +37,7 @@ function Suggestion(props) {
         },
       })
       .then((response) => {
-        console.log(response.data);
+        //console.log(response.data);
         const random = Math.floor(
           Math.random() * (response.data.movies.length - 6)
         );
