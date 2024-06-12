@@ -14,6 +14,14 @@ export default function Home(props) {
     setSuggestions(suggestionData);
   }, [activeProfile]);
 
+  useEffect(() => {
+    console.log("mount oldu");
+    return function () {
+      //return'de fonksiyon unmount eventi
+      console.log("unmount oldu");
+    };
+  }, []); //boş dependency array mount eventi
+
   return (
     <>
       <Hero activeProfile={activeProfile} />
